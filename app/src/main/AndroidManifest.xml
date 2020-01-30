@@ -23,6 +23,7 @@
             android:name=".Splashscreen"
             android:label="@string/title_activity_splashscreen"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddItem"/>
     </application>
 
 </manifest>

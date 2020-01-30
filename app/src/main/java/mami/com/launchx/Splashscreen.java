@@ -1,5 +1,6 @@
 package mami.com.launchx;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,6 +20,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -40,6 +42,7 @@ public class Splashscreen extends AppCompatActivity {
     private ListView listView;
     private ArrayList<MyDataModel> list;
     private MyArrayAdapter adapter;
+    Button button;
 
 
     @Override
@@ -49,7 +52,19 @@ public class Splashscreen extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        button=(Button)findViewById(R.id.button);
 
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(getApplicationContext(), AddItem.class);
+                startActivity(intent);
+            }
+
+        });
         /**
          * Array List for Binding Data from JSON to this List
          */
